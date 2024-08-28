@@ -184,7 +184,7 @@
   margin: 8px 0;
 }
 
-.invitation-image {
+.invitation-image-container {
   max-width: 620px;
   display: flex;
   margin: auto;
@@ -202,4 +202,124 @@
     margin-top: 16px;
     align-items: center;
   }
+}
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 16px;
+}
+
+.project-header-title {
+  font-weight: 300;
+  color: #a5918b;
+  font-size: 40px;
+  letter-spacing: 1;
+  margin: 8px 0;
+}
+
+.project-first-image-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+}
+
+.project-image-1 {
+  margin-top: 70px;
+  margin-right: -25px;
+}
+
+.project-image-2 {
+  margin-right: -20px;
+}
+
+.project-image-3 {
+  margin-top: 150px;
+  margin-right: -25px;
+}
+
+
+@media (min-width: 768px) {
+  .project-image-1 {
+    margin-top: 0;
+    margin-right: -20px;
+    z-index: 1;
+    width: 180px;
+    height: 270px;
+  }
+  
+  .project-image-2 {
+    width: 330px;
+    height: 500px;
+  }
+  
+  .project-image-3 {
+    margin-top: 0;
+    margin-right: 0;
+    width: 180px;
+    height: 270px;
+  }
+
+  .project-first-image-container {
+    align-items: center;
+  }
+  
+}
+
+.project-header-title-box  {
+  position: relative;
+}
+
+.project-header-title-box ::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  bottom: -100px;
+  left: 50%;
+  width: 2px;
+  background-color: #979797;
+}
+
+.wedding-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.wedding-section-image {
+  width: 80px;
+  height: 72px;
+}
+
+.wedding-section-title {
+  font-weight: 300;
+  color: #a5918b;
+  font-size: 18px;
+  margin: 0;
+}
+
+.wedding-section-time {
+  font-weight: 700;
+  color: #a5918b;
+  font-size: 28px;
+  margin: 0;
+}
+
+.wedding-section-church {
+  font-weight: 700;
+  color: #a5918b;
+  font-size: 28px;
+  margin: 0;
+}
+
+.wedding-section-village {
+  font-weight: 700;
+  color: #a5918b;
+  font-size: 16px;
+  margin: 0;
 }
