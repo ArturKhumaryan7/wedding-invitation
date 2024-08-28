@@ -1,42 +1,205 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main-container {
+  padding-bottom: 24px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-container {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  display: block;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  flex: 1
+}
+
+.image-container {
+  flex: 1;
+}
+
+.name-letter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  top: 250px;
+  width: 100%;
+}
+
+.letter-a {
+  font-family: Cinzel Decorative;
+  font-weight: 400;
+  font-size: 125px;
+  color: #a5918b;
+  margin: 8px 0px
+}
+
+.letter-t {
+  font-family: Cinzel Decorative;
+  font-weight: 400;
+  font-size: 125px;  
+  color: #a5918b;
+  margin: 8px 0px;
+  padding-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .header-info {
+    position: absolute;
+    bottom: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .letter-a {
+    color: white;
+  }
+  .letter-t {
+    color: white;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.heder-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.heder-text {
+  font-family: Allura;
+  font-weight: 400;
+  color: #a5918b;
+  font-size: 35px;
+  margin: 0;
+}
+
+.heder-title {
+  font-weight: 300;
+  color: #a5918b;
+  font-size: 16px;
+  margin: 8px 0px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+   .header-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 0 8px;
+   }
+}
+
+.countdown-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 40px;
+}
+
+.countdown-title {
+  font-weight: 300;
+  color: #a5918b;
+  font-size: 20px;
+  margin: 8px 0px;
+}
+
+.single-countdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.single-countdown-item-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.number-countdown {
+  color: #a5918b;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.title-countdown {
+  color: #a5918b;
+  font-size: 10px;
+  font-weight: 300;
+}  
+
+.single-countdown-item ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -16px;
+    width: 1px;
+    opacity: 0.3;
+    background-color: #979797;
+}
+
+.invitation-content-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.invitation-text-container {
+  padding: 8px;
+  max-width: 620px;
+}
+
+.invitation-title {
+  font-weight: 300;
+  color: #a5918b;
+  font-size: 23px;
+  text-transform: uppercase;
+  margin: 8px 0;
+}
+
+.invitation-text {
+  font-weight: 300;
+  color: #a5918b;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.invitation-date {
+  font-weight: 300;
+  color: #a5918b;
+  font-size: 31px;
+  letter-spacing: 1;
+  margin: 8px 0;
+}
+
+.invitation-image {
+  max-width: 620px;
+  display: flex;
+  margin: auto;
+}
+
+.invitation-image-2 {
+  margin-top: 50px;
+  margin-left: -25px;
+}
+
+@media (min-width: 768px) {
+  .invitation-content-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    align-items: center;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
