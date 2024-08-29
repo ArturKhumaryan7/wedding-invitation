@@ -28,6 +28,7 @@
 
 .image-container {
   flex: 1;
+  aspect-ratio: 0.67;
 }
 
 .name-letter {
