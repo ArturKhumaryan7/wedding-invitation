@@ -1,9 +1,12 @@
+import { useSnackbar } from 'notistack';
 import { Controller, useForm } from "react-hook-form";
 import { contentImage } from '../utils/constatnt'
 
 
 export const AcceptInvitationSection = () => {
-    const {control, register, handleSubmit, watch} = useForm({
+    const { enqueueSnackbar } = useSnackbar();
+
+    const {control, register, handleSubmit, watch, reset} = useForm({
         defaultValues: {
             agree: true,
             name: '',
@@ -13,15 +16,39 @@ export const AcceptInvitationSection = () => {
 
     const agree = watch('agree')
 
+   const onSubmit = async (data) => {
+    const formData = new FormData();
 
-   const onSubmit = (date) => {
-    const sendData = {
-        participation: date.agree ? 'yes' : 'no',
-        guestName: date.name,
-        guestCount: date.count
+    formData.append('participation', data.agree ? 'yes' : 'no')
+    formData.append('guestName', data.name)
+    formData.append('guestCount', data.count)
+
+
+
+    formData.append("access_key", "f21797d5-5d9c-4aff-8022-8fd33a931778");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const respData = await response.json();
+
+    if (respData.success) {
+      enqueueSnackbar('Form Submitted Successfully', {
+        variant: 'success'
+      })
+      reset({
+        agree: true,
+        name: '',
+        count: ''
+    })
+    } else {
+      enqueueSnackbar('Something get wrong', {
+        variant: 'error'
+      })
     }
-    console.log(sendData)
-   }
+  };
 
 
     return (
