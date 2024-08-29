@@ -215,9 +215,9 @@
 }
 
 .project-header-title {
-  font-weight: 300;
+  font-weight: 500;
   color: #a5918b;
-  font-size: 40px;
+  font-size: 32px;
   letter-spacing: 1;
   margin: 8px 0;
 }
@@ -226,6 +226,7 @@
   display: flex;
   flex-direction: row;
   margin-top: 100px;
+  position: relative;
 }
 
 .project-image-1 {
@@ -288,7 +289,62 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  position: relative;
+  margin-top: 80px;
+}
+
+.party-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.wedding-section ::after {
+  content: "";
+  position: absolute;
+  top: 320px;
+  bottom: -95px;
+  left: 50%;
+  width: 2px;
+  background-color: #979797;
+}
+
+.party-section ::before {
+  content: "";
+  position: absolute;
+  top: -95px;
+  bottom: 320px;
+  left: 50%;
+  width: 2px;
+  background-color: #979797;
+}
+
+@media (max-width: 526px) { 
+  .party-section ::before {
+    content: "";
+    position: absolute;
+    top: -95px;
+    bottom: 345px;
+    left: 50%;
+    width: 2px;
+    background-color: #979797;
+  }
+}
+
+@media (max-width: 410px) { 
+  .party-section ::before {
+    content: "";
+    position: absolute;
+    top: -95px;
+    bottom: 385px;
+    left: 50%;
+    width: 2px;
+    background-color: #979797;
+  }
 }
 
 .wedding-section-image {
@@ -322,4 +378,35 @@
   color: #a5918b;
   font-size: 16px;
   margin: 0;
+}
+
+.accept-invitation-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 16px;
+}
+
+.radio-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
 }

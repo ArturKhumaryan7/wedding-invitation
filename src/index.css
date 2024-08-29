@@ -45,6 +45,23 @@ a {
   text-decoration: none;
 }
 
+button {
+  border-radius: 50px;
+  border: 0 none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #a5918b;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -53,4 +70,51 @@ a {
   a:hover {
     color: #ffffff;
   }
+}
+
+input[type="radio"] {
+  place-content: center;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #a5918b;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="radio"]:checked {
+  background-color: #a5918b;
+}
+
+.radio {
+  background-color: #a5918b;
+}
+
+input {
+  padding: 6px 16px;
+  border-radius: 16px;
+  border: 1px solid #a5918b;
+  color: #a5918b;
+  font-size: 16px;
+  font-weight: 700;
+  height: 28px;
+}
+
+input::placeholder {
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -1,4 +1,5 @@
 import './App.css'
+import { AcceptInvitationSection } from './modules/components/AcceptInvitationSection'
 import { CountdownSection } from './modules/components/CountdowSection'
 import { Header } from './modules/components/Header'
 import { InvitationContent } from './modules/components/InvitationContent'
@@ -12,6 +13,7 @@ function App() {
       <CountdownSection/>
       <InvitationContent/>
       <Project/>
+      <AcceptInvitationSection/>
     </div>
   )
 }
