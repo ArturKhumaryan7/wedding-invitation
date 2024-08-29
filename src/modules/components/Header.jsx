@@ -1,16 +1,45 @@
+import { useEffect } from 'react';
 import {headerImageUrl} from '../utils/constatnt'
 
 export const Header = () => {
+   useEffect(() => {
+      const image = document.querySelector('.image-container');
+      image.classList.remove('animate__slideInDown');
+
+      const letterA = document.querySelector('.letter-a');
+      letterA.classList.remove('animate__fadeInLeft');
+
+      const letterT = document.querySelector('.letter-t');
+      letterT.classList.remove('animate__fadeInRight');
+
+      const text = document.querySelector('.heder-text');
+      text.classList.remove('animate__zoomIn');
+      
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              image.classList.add('animate__slideInDown');
+              letterA.classList.add('animate__fadeInLeft');
+              letterT.classList.add('animate__fadeInRight');
+              text.classList.add('animate__zoomIn');
+              return;
+            }
+          });
+        });
+
+      observer.observe(document.querySelector('.header-container'));
+    }, [])
+
     return <div className='header-container'>
-              <div className='image-container animate__animated animate__slideInDown'>
+              <div className='image-container animate__animated'>
                  <img className='image' src={headerImageUrl} alt={'header image'}/>
               </div>
               <div className='header-info'>
                  <div className='name-letter'>
-                   <h1 className='letter-a animate__animated animate__fadeInLeft'>A</h1>
-                   <h1 className='letter-t animate__animated animate__fadeInRight'>T</h1>
+                   <h1 className='letter-a animate__animated'>A</h1>
+                   <h1 className='letter-t animate__animated'>T</h1>
                  </div>
-                 <div className='heder-text-box animate__animated  animate__zoomIn'>
+                 <div className='heder-text-box animate__animated'>
                     <h2 className='heder-text'>
                        Artur & Tatev <br/> Our forever begins today
                    </h2>

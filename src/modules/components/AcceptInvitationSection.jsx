@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSnackbar } from 'notistack';
 import { Controller, useForm } from "react-hook-form";
 import { contentImage } from '../utils/constatnt'
@@ -50,11 +51,29 @@ export const AcceptInvitationSection = () => {
     }
   };
 
+  useEffect(() => {
+    const image = document.querySelector('.accept-image-container');
+    image.classList.remove('animate__zoomIn');
 
+    
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            console.log('add', image)
+            image.classList.add('animate__zoomIn');
+            return;
+          }
+        });
+      });
+
+    observer.observe(document.querySelector('.accept-invitation-section'));
+  }, [])
+  
+  
     return (
         <section className="accept-invitation-section">
-            <div className="project-first-image-container">
-                        <img className='image' src={contentImage} alt={'content image'}/>
+            <div className="accept-image-container animate__animated">
+                    <img className='image' src={contentImage} alt={'content image'}/>
             </div>
             <h3 className="wedding-section-church">Խնդրում ենք հաստատել ձեր մասնակցությունը</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -83,7 +102,7 @@ export const AcceptInvitationSection = () => {
                     <h4 className="invitation-text">Խնդրում ենք նշել Ձեր անունը և հյուրերի թիվը</h4>
                         <div className="input-box">
                             <input placeholder="Անուն Ազգանուն" {...register('name', {required: true})}/>
-                             <input placeholder="Հյուրերի թիվ" type="number" {...register('count', {required: agree})}/>
+                            <input disabled={!agree} placeholder="Հյուրերի թիվ" type="number" {...register('count', {required: agree})}/>
                         </div>
                     </div>
                     <button type="submit">Ուղարկել</button>

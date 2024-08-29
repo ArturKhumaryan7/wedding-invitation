@@ -105,9 +105,13 @@ input {
   background: #fff;
 }
 
+input:disabled {
+ opacity: 0.5;
+}
+
 input::placeholder {
   font-weight: 300;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 input::-webkit-outer-spin-button,
