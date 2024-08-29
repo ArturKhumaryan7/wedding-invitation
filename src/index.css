@@ -102,6 +102,7 @@ input {
   font-size: 16px;
   font-weight: 700;
   height: 28px;
+  background: #fff;
 }
 
 input::placeholder {
