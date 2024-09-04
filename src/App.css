@@ -204,11 +204,13 @@
   max-width: 620px;
   display: flex;
   margin: auto;
+  align-items: start;
 }
 
 .invitation-image-1 {
   opacity: 0;
   transform: translate3d(-100%, -100%, 0);
+  background-color: rgba(244,243,243, 1);
 }
 
 .invitation-image-2 {
@@ -216,6 +218,7 @@
   margin-left: -25px;
   transform: translate3d(100%, -100%, 0);
   opacity: 0;
+  background-color: rgba(244,243,243, 1);
 }
 
 @media (min-width: 768px) {
