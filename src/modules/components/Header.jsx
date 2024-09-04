@@ -31,7 +31,7 @@ export const Header = () => {
 
     return <div className='header-container'>
               <div className='image-container animate__animated'>
-                 <img className='image' src="/IMG_1285.JPG" alt={'header image'}/>
+                 <img className='image-header' src="/IMG_1285.JPG" alt={'header image'}/>
               </div>
               <div className='header-info'>
                  <div className='name-letter'>
