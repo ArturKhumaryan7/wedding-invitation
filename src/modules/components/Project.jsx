@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { contentImage } from '../utils/constatnt'
 import { PartySection } from './PartySection'
 import { WeddingSection } from './WeddingSection'
 
@@ -39,13 +38,13 @@ export const Project = () => {
             <WeddingSection/>
             <div className="project-first-image-container">
                     <div className='project-image-1 animate__animated'>
-                        <img className='image' src={contentImage} alt={'content image'}/>
+                        <img className='image' src="/IMG_1366.JPG" alt={'content image'}/>
                     </div>
                     <div className='project-image-2 animate__animated'>
-                         <img className='image' src={contentImage} alt={'content image 1'}/>
+                         <img className='image' src="/IMG_1636.JPG" alt={'content image 1'}/>
                     </div>
                     <div className='project-image-3 animate__animated'>
-                         <img className='image' src={contentImage} alt={'content image 1'}/>
+                         <img className='image' src="/IMG_1392.JPG" alt={'content image 1'}/>
                     </div>
              </div>
              <PartySection/>

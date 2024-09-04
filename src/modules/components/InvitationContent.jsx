@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { contentImage } from '../utils/constatnt'
 
 
 export const InvitationContent = () => {
@@ -36,10 +35,10 @@ export const InvitationContent = () => {
              </div>
              <div className="invitation-image-container">
                     <div className='invitation-image-1 animate__animated'>
-                        <img className='image' src={contentImage} alt={'content image'}/>
+                        <img className='image' src="/IMG_1342.JPG" alt={'content image'}/>
                     </div>
                     <div className='invitation-image-2 animate__animated'>
-                         <img className='image' src={contentImage} alt={'content image 1'}/>
+                         <img className='image' src="/IMG_1345.JPG" alt={'content image 1'}/>
                     </div>
              </div>
         </section>

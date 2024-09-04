@@ -17,6 +17,7 @@
 .image {
   width: 100%;
   display: block;
+  opacity: 0.8;
 }
 
 .header-info {
@@ -30,6 +31,18 @@
 .image-container {
   flex: 1;
   aspect-ratio: 0.67;
+  background: linear-gradient(to bottom, transparent 90%, rgba(244,243,243));
+  position: relative;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200px; 
+  background-image: linear-gradient(to top, rgba(244,243,243, 1) 0%, rgba(244,243,243, 0.8) 70%, rgba(244,243,243, 0) 100%);
 }
 
 .name-letter {
@@ -238,20 +251,24 @@
   flex-direction: row;
   margin-top: 100px;
   position: relative;
+  align-items: start;
 }
 
 .project-image-1 {
   margin-top: 70px;
   margin-right: -25px;
+  background-color: rgba(244,243,243, 1);
 }
 
 .project-image-2 {
   margin-right: -20px;
+  background-color: rgba(244,243,243, 1);
 }
 
 .project-image-3 {
   margin-top: 150px;
   margin-right: -25px;
+  background-color: rgba(244,243,243, 1);
 }
 
 
@@ -406,6 +423,7 @@
   flex-direction: row;
   margin-top: 100px;
   position: relative;
+  max-width: 344px;
 }
 
 .radio-box {

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useSnackbar } from 'notistack';
 import { Controller, useForm } from "react-hook-form";
-import { contentImage } from '../utils/constatnt'
 
 
 export const AcceptInvitationSection = () => {
@@ -73,7 +72,7 @@ export const AcceptInvitationSection = () => {
     return (
         <section className="accept-invitation-section">
             <div className="accept-image-container animate__animated">
-                    <img className='image' src={contentImage} alt={'content image'}/>
+                    <img className='image' src="/IMG_1334.JPG" alt={'content image'}/>
             </div>
             <h3 className="wedding-section-church">Խնդրում ենք հաստատել ձեր մասնակցությունը</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
