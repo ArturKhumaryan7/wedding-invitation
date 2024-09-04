@@ -40,7 +40,7 @@ export const Header = () => {
                  </div>
                  <div className='heder-text-box animate__animated'>
                     <h2 className='heder-text'>
-                       Artur & Tatev <br/> Our forever begins today
+                       Artur & Tatev <br/> The adventure of lifetime begins
                    </h2>
                  <h4 className='heder-title'>
                      Հարսանյաց հրավիրատոմս
