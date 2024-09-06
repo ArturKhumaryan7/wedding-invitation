@@ -77,7 +77,7 @@ export const AcceptInvitationSection = () => {
             <h3 className="wedding-section-church">Խնդրում ենք հաստատել ձեր մասնակցությունը</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="radio-container">
-                    <p className='invitation-text'>Կսպասենք ձեր պատասխանին մինչև <strong>Սեպտեմբերի 25-ը</strong></p>
+                    <p className='invitation-text'>Կսպասենք ձեր պատասխանին մինչև <strong>Սեպտեմբերի 30-ը</strong></p>
                     <Controller 
                         name='agree'
                         control={control}
